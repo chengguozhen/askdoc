@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>查找医生</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection"content="telephone=no, email=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 适应移动端end -->
+	<link rel="stylesheet" href="css/style.css"></head>
+<body>
+	<div class="container" id="container">
+		<div class="ui-search-bar">
+			<div class="ui-area-selecter">
+				<div class="ui-area-selecter-title"></div>
+				<ul class="ui-area-selecter-parent">
+					<li>北京</li>
+					<li>福建</li>
+				</ul>
+				<ul class="ui-area-selecter-children"></ul>
+			</div>
+			<div class="ui-search-box"> <i class="icon-search"></i>
+				<input type="text" placeholder="疾病/医生姓名/医院">
+				<span class="ui-search-backer"></span>
+			</div>
+		</div>
+		<div class="ui-filter">
+			<div class="ui-filter-title">
+				<ul>
+					<li>医院</li>
+					<li>科室</li>
+					<li>服务</li>
+					<li>职称</li>
+				</ul>
+				<div class="ui-filter-selectbox">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="ui-list">
+			<div class="ui-block">
+				<div class="ui-doctor-bar">
+					<div class="ui-doctor-bar-body">
+						<div class="ui-doctor-bar-avd">
+							<img src="" alt=""> <i></i>
+						</div>
+						<div class="ui-doctor-bar-content"> <em>周薇</em>
+							<span>主任医师</span>
+							<div>北京大学第三医院</div>
+							<div>擅长：呼吸道感染 咳嗽 支气管哮喘</div>
+						</div>
+					</div>
+					<div class="ui-doctor-bar-footer">
+						<a href="" class="ui-doctor-icon-talk">图文</a>
+						<a href="" class="ui-doctor-icon-tel">电话</a>
+						<a href="" class="ui-doctor-icon-package">套餐</a>
+						<span class="ui-doctor-price">10￥起</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
