@@ -1,0 +1,19 @@
+.setkey(@counter,@header:~"") when (@counter <= 100){
+	@c:~"%";
+	@{counter}@{c} {
+		@{header}transform:translate(cos(unit(@counter,deg)*3.6)*3px,sin(unit(@counter,deg)*3.6)*3px);
+	}
+	.setkey(@counter+5,@header);
+};
+@-webkit-keyframes search {
+	.setkey(0,-webkit-);
+}
+@-o-keyframes search {
+	.setkey(0,-o-);
+}
+@-moz-keyframes search {
+	.setkey(0,-moz-);
+}
+@keyframes search {
+	.setkey(0);
+}

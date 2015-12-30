@@ -41,13 +41,19 @@
 <body>
 	<div class="container" id="container">
 		<div class="ui-search-bar">
-			<div class="ui-area-selecter">
-				<div class="ui-area-selecter-title"></div>
+			<div class="ui-area-selecter"><!-- ui-area-selecter-open -->
+				<div class="ui-area-selecter-title">北京</div>
 				<ul class="ui-area-selecter-parent">
-					<li>北京</li>
+					<li class="active">北京</li>
 					<li>福建</li>
 				</ul>
-				<ul class="ui-area-selecter-children"></ul>
+				<ul class="ui-area-selecter-children">
+					<li class="active">北京</li>
+					<li>北京</li>
+					<li>北京</li>
+					<li>北京</li>
+					<li>北京</li>
+				</ul>
 			</div>
 			<div class="ui-search-box"> <i class="icon-search"></i>
 				<input type="text" placeholder="疾病/医生姓名/医院">
@@ -62,39 +68,53 @@
 					<li>服务</li>
 					<li>职称</li>
 				</ul>
-				<div class="ui-filter-selectbox">
-					<ul>
-						<li></li>
-					</ul>
-				</div>
+			</div>
+			<div class="ui-filter-selectbox"><!-- open -->
+				<ul>
+					<li>医院</li>
+					<li>医院</li>
+					<li>医院</li>
+					<li>医院</li>
+					<li>医院</li>
+					<li>医院</li>
+				</ul>
 			</div>
 		</div>
 		<div class="ui-list">
+			<div class="ui-noresult">
+			呀！没咱这地儿的医生<br>去其它城市看看吧
+			</div>
 			<div class="ui-block">
 				<div class="ui-doctor-bar">
 					<div class="ui-doctor-bar-body">
 						<div class="ui-doctor-bar-avd">
-							<img src="" alt=""> <i></i>
+							<img src="images/adv.png" alt=""> <i>我的医生</i>
 						</div>
+						<!--
+					-->
 						<div class="ui-doctor-bar-content"> <em>周薇</em>
 							<span>主任医师</span>
-							<div>北京大学第三医院</div>
-							<div>擅长：呼吸道感染 咳嗽 支气管哮喘</div>
+							<div class="ui-doctor-bar-content-text">北京大学第三医院</div>
+							<div class="ui-doctor-bar-content-tips clearfix">
+								<i>呼吸道感染</i>
+								<i>咳嗽</i>
+								<i>支气管哮喘</i>
+							</div>
+							<div class="ui-doctor-bar-footer">
+								<a href="" class="ui-doctor-icon-tel"></a>
+								<a href="" class="ui-doctor-icon-doc"></a>
+								<a href="" class="ui-doctor-icon-talk"></a>
+								<span class="ui-doctor-price">10￥起</span>
+							</div>
 						</div>
-					</div>
-					<div class="ui-doctor-bar-footer">
-						<a href="" class="ui-doctor-icon-talk">图文</a>
-						<a href="" class="ui-doctor-icon-tel">电话</a>
-						<a href="" class="ui-doctor-icon-package">套餐</a>
-						<span class="ui-doctor-price">10￥起</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="ui-hotwords">
+		<div class="ui-hotwords ">
 			<header>热门搜索</header>
-			<div class="ui-hotwords-box">
-				<a href="">急慢性咳嗽</a>
+			<div class="ui-hotwords-box clearfix">
+				<a href="" class="active">急慢性咳嗽</a>
 				<a href="">肺炎</a>
 				<a href="">呼吸道感染</a>
 				<a href="">气管炎</a>
@@ -103,6 +123,8 @@
 				<a href="">支气管哮喘</a>
 			</div>
 		</div>
+		<!-- <div class="ui-cover-4"></div> -->
 	</div>
+	<script src="js/style.js"></script>
 </body>
 </html>

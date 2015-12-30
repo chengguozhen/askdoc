@@ -1,0 +1,112 @@
+@border-color:#ccc;
+//影子边框 用于实现小于1像素的边框
+//只能用于底边/顶边
+//使用盒子阴影实现，故而与盒子阴影样式有所冲突
+//默认为底部边框 0.5像素宽 颜色为#ccc的边框
+//当第三个参数传进-1时用于顶边
+.shadowborder(@width:.5,@color:@border-color,@istop:1){
+	-webkit-box-shadow: 0 @istop*@width*1px  @color;
+	box-shadow: 0 @istop*@width*1px  @color;
+}
+//伪类边框 用于实现小于1像素的边框
+//默认用于底边/顶边 可以使用全边框
+//使用before伪元素实现，故而会产生before伪元素占用
+//将会占用当前元素的position（relative）属性，
+//如需设置position属性请紧跟着次混合设置
+//默认为底部边框 0.5像素宽 颜色为#ccc的边框
+//当第三个参数传进top时用于顶边
+//当第三个参数传进all时用于全边框
+//第四个参数只在全边框时有效，表示边框圆角值，接受一切可能的圆角值
+.pseborder(@width:.5,@color:@border-color,@type:bottom,@round:0){
+	@ratio:1/@width;
+	position: relative;
+	& when (@type=bottom){
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 0;
+			border-bottom: 1px solid @color;
+			top: 100%;
+			left: 0;
+			-webkit-transform: scaleY(@width);
+			-ms-transform: scaleY(@width);
+			-o-transform: scaleY(@width);
+			transform: scaleY(@width);
+			z-index: 3;
+		}
+	}
+	& when (@type=top){
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 0;
+			border-top: 1px solid @color;
+			top: 0;
+			left: 0;
+			-webkit-transform: scaleY(@width);
+			-ms-transform: scaleY(@width);
+			-o-transform: scaleY(@width);
+			transform: scaleY(@width);
+			z-index: 3;
+		}
+	}
+	& when (@type=left){
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 100%;
+			border-right: 1px solid @color;
+			top: 0;
+			left: 0;
+			-webkit-transform: scaleX(@width);
+			-ms-transform: scaleX(@width);
+			-o-transform: scaleX(@width);
+			transform: scaleX(@width);
+			z-index: 3;
+		}
+	}
+	& when (@type=right){
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 0;
+			height: 100%;
+			border-left: 1px solid @color;
+			top: 0;
+			right: 0;
+			-webkit-transform: scaleX(@width);
+			-ms-transform: scaleX(@width);
+			-o-transform: scaleX(@width);
+			transform: scaleX(@width);
+			z-index: 3;
+		}
+	}
+	& when (@type=all){
+		&:before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%-@ratio*50%;
+			left: 50%-@ratio*50%;
+			width: @ratio*100%;
+			height: @ratio*100%;
+			border: 1px solid @color;
+			-webkit-transform: scale(@width);
+			-ms-transform: scale(@width);
+			-o-transform: scale(@width);
+			transform: scale(@width);
+			border-radius: @round;
+			z-index: 3;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	}
+}
