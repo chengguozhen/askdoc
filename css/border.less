@@ -9,12 +9,12 @@
 	box-shadow: 0 @istop*@width*1px  @color;
 }
 //伪类边框 用于实现小于1像素的边框
-//默认用于底边/顶边 可以使用全边框
+//默认用于底边 可以使用全边框
 //使用before伪元素实现，故而会产生before伪元素占用
 //将会占用当前元素的position（relative）属性，
-//如需设置position属性请紧跟着次混合设置
+//如需设置position属性请紧跟着此混合设置
 //默认为底部边框 0.5像素宽 颜色为#ccc的边框
-//当第三个参数传进top时用于顶边
+//当第三个参数传进top时用于顶边以此类推
 //当第三个参数传进all时用于全边框
 //第四个参数只在全边框时有效，表示边框圆角值，接受一切可能的圆角值
 .pseborder(@width:.5,@color:@border-color,@type:bottom,@round:0){
@@ -102,7 +102,7 @@
 			-ms-transform: scale(@width);
 			-o-transform: scale(@width);
 			transform: scale(@width);
-			border-radius: @round;
+			border-radius: 2*@round;
 			z-index: 3;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;

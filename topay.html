@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>订单支付</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection"content="telephone=no, email=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- 设置苹果工具栏颜色 -->
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+	<meta name="HandheldFriendly" content="true">
+	<!-- 微软的老式浏览器 -->
+	<meta name="MobileOptimized" content="320">
+	<!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- 适应移动端end -->
+	<link rel="stylesheet" href="css/style.css"></head>
+<body>
+	<div class="container" id="container">
+		<div class="ui-block ui-block-mbt">
+			<div class="ui-topay">
+				<div class="ui-server-select-box">
+					<div>
+						<img src="images/serveravd.png" alt=""></div>
+					<div class="ui-server-select-content">
+						<div class="ui-server-select-tit">
+							单次图文咨询
+						</div>
+						<div class="ui-server-select-p">通过文字、图片、语音进行咨询</div>
+						<span class="ui-server-select-price">￥20</span>
+					</div>
+				</div>
+				<div class="ui-topay-nums">
+					<span>数量</span>
+					<div class="ui-topay-btn-group">
+						<a href="" class="ui-topay-btn ui-topay-btn-remove"><i class="remove"></i></a>
+						<span>2</span>
+						<a href="" class="ui-topay-btn ui-topay-btn-add"><i class="add"></i></a>
+					</div>
+				</div>
+				<div class="ui-topay-death">
+					<span>服务到期时间</span>
+					<time>2016-06-18</time>
+				</div>
+			</div>
+		</div>
+		<div class="ui-block ui-block-mbt ui-block-bt">
+			<div class="ui-checked">
+				<span>小计</span>
+				<div class="ui-checked-price">￥40</div>
+			</div>
+		</div>
+		<div class="ui-block ui-block-pbt">
+			<a href="" class="ui-btn">支付订单</a>
+		</div>
+	</div>
+	<script src="js/style.js"></script>
+</body>
+</html>
